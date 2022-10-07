@@ -1,7 +1,7 @@
 from helpers.database import db
 
 
-class PessoaModel(db.model):
+class Pessoa(db.Model):
 
     __tablename__ = 'tb_pessoa'
 
@@ -16,3 +16,6 @@ class PessoaModel(db.model):
         self.nascimento = nascimento
         self.email = email
         self.telefone = telefone
+
+    def __repr__(self):
+        return '<User %r>' % self.username
